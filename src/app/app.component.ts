@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { SpacexService } from './spacex.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-root',
@@ -34,8 +35,7 @@ export class AppComponent implements OnInit {
   }
 
   getSpaceXMissionData(params?) {
-    const   apiUrl = 'https://api.spacexdata.com/v3/launches?limit=100';
-    this.spacexService.getMissionData(apiUrl,params).subscribe(response => {
+    this.spacexService.getMissionData(environment.baseUrl,params).subscribe(response => {
       this.spaceData = response;
       this.isLoader = false;
     },error=>{      this.isLoader = false;

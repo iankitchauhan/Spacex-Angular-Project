@@ -1,9 +1,9 @@
-<div class="row">
+<div class="row" *ngIf="mainContent">
   <div class="col-md-3 card-container" *ngFor="let item of mainContent;let i=index;">
   <div class="card-group">
   <div class="card">
     <div class="img-container">
-    <img class="card-img-top" [src]="item?.links?.mission_patch_small"  onError="this.src='../../../../assets/No-image-available.png';" alt="Card image cap">
+    <img class="card-img-top" src="{{item?.links?.mission_patch_small}}"  onError="this.src='../../../../assets/No-image-available.png';" alt="Card image cap">
   </div>
     <div class="card-body">
      <a href="void(0)"> <h5 class="card-title">{{item?.mission_name}}#{{i +1}}</h5></a>

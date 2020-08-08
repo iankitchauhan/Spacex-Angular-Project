@@ -7,8 +7,4 @@ body {
      "Helvetica Neue", sans-serif;
       padding: 40px 20px;
         background: #f2f2f2;
-        background-image: url("./assets/spce-two.jpg");
-        background-attachment: fixed;
-        background-size: cover;
-
       }
