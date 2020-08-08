@@ -1,0 +1,21 @@
+.btn-success {
+  color: black;
+  background-color: #00ff7f;
+  border-color: #00ff7f;
+  font-weight: 500;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.btn-success:hover, .btn-success.active {
+  background-color: #00fa9a;
+  border-color: #00fa9a;
+}
+.my-class{
+  background-color: #218838;
+  border-color: #218838;
+}
+
+.filter-tags{
+text-align: center;
+border-bottom: solid 2px #c6c6c6;
+}

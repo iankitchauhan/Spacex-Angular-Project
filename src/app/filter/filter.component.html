@@ -1,0 +1,27 @@
+<p><b>Filters</b></p>
+<p class="filter-tags"><b>Launch Year</b></p>
+<div class="row">
+  <div class="col-6" *ngFor="let year of yearData;let i =index">
+<button type="button" [ngClass]="{'my-class': selectedYear === i && booleanCheck}" (click)="selectYear(year?.year,i)" class="btn btn-success">{{year?.year}}</button>
+</div>
+</div>
+
+<p  class="filter-tags"><b> Successful Launch</b></p>
+<div class="row">
+<div class="col-6">
+<button type="button"  [ngClass]="{'my-class': selectedLaunch === 's1' && booleanLaunch}" (click)="selectSuccessfulLaunch(true,'s1')" class="btn btn-success">True</button>
+</div>
+<div class="col-6">
+<button type="button"  [ngClass]="{'my-class': selectedLaunch === 's2' && booleanLaunch}" (click)="selectSuccessfulLaunch(false,'s2')" class="btn btn-success">False</button>
+</div>
+</div>
+
+<p class="filter-tags"><b> Successful Land</b></p>
+<div class="row">
+<div class="col-6">
+<button type="button"  [ngClass]="{'my-class': selectedLand === 'l1' && booleanLand}" (click)="successfulLand('true','l1')" class="btn btn-success">True</button>
+</div>
+<div class="col-6">
+<button type="button"  [ngClass]="{'my-class': selectedLand === 'l2' && booleanLand}" (click)="successfulLand('false','l2')" class="btn btn-success">False</button>
+</div>
+</div>

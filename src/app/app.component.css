@@ -1,0 +1,34 @@
+.btn-success {
+  color: black;
+  background-color: lightgreen;
+  border-color: lightgreen;
+  font-weight: 500;
+}
+.my-class{
+  background-color: #218838;
+  border-color: #218838;
+}
+.heading{
+  font-size: 39px;
+  margin: 0 0 20px 0;
+  text-align: center;
+  border-bottom: solid 4px;
+}
+
+@media(max-width :767px){
+  .heading{
+    font-size: 18px;
+    text-align: center;
+  }
+}
+
+.sideBar {
+background-color: white;
+padding: 12px;
+margin-top: 13px;
+}
+
+.footer-text {
+text-align: center;
+color: white;
+}

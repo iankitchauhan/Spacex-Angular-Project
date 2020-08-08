@@ -1,0 +1,20 @@
+.starter-template {
+  padding: 3rem 1.5rem;
+  margin-top: 50px;
+}
+.card-container{
+  margin: 10px 0;
+}
+.card-group{
+ height: 100%;
+}
+
+.img-container{
+  background: #f2f2f2;
+  padding: 10px;
+  margin: 10px;
+}
+
+.card {
+  opacity: .9;
+}

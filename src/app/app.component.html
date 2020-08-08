@@ -1,0 +1,19 @@
+<ng-container *ngIf="!isLoader" >
+  <div class="container-fluid">
+    <h2 class="heading">SpaceX Launched Programs</h2>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sideBar">
+      <app-filter (emitFilter)="getSpaceXMissionData($event)" [yearData]="yearArray" ></app-filter>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <app-main-content [mainContent]="spaceData" ></app-main-content>
+    </div>
+    </div>
+    </div>
+    <p class="footer-text"><b>Developed By:Ankit Kumar</b></p>
+  </ng-container>
+
+  <mat-progress-spinner *ngIf="isLoader" style="margin:0 auto;" value="100" size="large" diameter="500"  mode="indeterminate">
+  </mat-progress-spinner>
