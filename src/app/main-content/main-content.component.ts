@@ -7,7 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MainContentComponent implements OnInit {
 
-@Input() mainContent:any;
+@Input() mainContent: any;
   constructor() { }
 
   ngOnInit() {

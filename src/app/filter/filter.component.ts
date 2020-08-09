@@ -7,34 +7,34 @@ import { EventEmitter } from '@angular/core';
   styleUrls: ['./filter.component.css']
 })
 export class FilterComponent implements OnInit {
-@Input() yearData:any;
-@Output() emitFilter  = new EventEmitter();
-selectedYear:any;
-selectedLaunch:any;
-selectedLand:any;
-booleanCheck = false;
-booleanLaunch = false;
-booleanLand = false;
-paramsObject ={};
+  @Input() yearData: any;
+  @Output() emitFilter = new EventEmitter();
+  selectedYear: any;
+  selectedLaunch: any;
+  selectedLand: any;
+  booleanCheck = false;
+  booleanLaunch = false;
+  booleanLand = false;
+  paramsObject = {};
 
   constructor() { }
-  selectYear(Syear,index) {
-    this.booleanCheck =!this.booleanCheck;
-    if( this.selectedYear !==  index ) {
+  selectYear(Syear, index) {
+    this.booleanCheck = !this.booleanCheck;
+    if (this.selectedYear !== index) {
       this.booleanCheck = true;
     }
-    this.selectedYear =  index;
+    this.selectedYear = index;
     this.paramsObject['launch_year'] = Syear;
-    if(this.booleanCheck){
-      this.emitFilter.emit( this.paramsObject);
-    }else {
+    if (this.booleanCheck) {
+      this.emitFilter.emit(this.paramsObject);
+    } else {
       delete this.paramsObject['launch_year'];
       this.emitFilter.emit(this.paramsObject)
     }
   }
-  selectSuccessfulLaunch(Slaunch,s) {
+  selectSuccessfulLaunch(Slaunch, s) {
     this.booleanLaunch = !this.booleanLaunch;
-    if( this.selectedLaunch !==  s ) {
+    if (this.selectedLaunch !== s) {
       this.booleanLaunch = true;
     }
     this.selectedLaunch = s;
@@ -47,9 +47,9 @@ paramsObject ={};
 
     }
   }
-  successfulLand(Sland,l) {
+  successfulLand(Sland, l) {
     this.booleanLand = !this.booleanLand;
-    if( this.selectedLand !==  l ) {
+    if (this.selectedLand !== l) {
       this.booleanLand = true;
     }
     this.selectedLand = l;
