@@ -27,10 +27,15 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
 ## Index:-
-1. Use of BootStrap 4(To make website responsive on all screens )
-2. Use of Angular material design(To make website responsive on all screens )
-3.Use of Angular properties(@Input and @output) to transfer data from parent to child and vice-versa.
+1. Use of BootStrap 4(To make website responsive on all screens ).
+2. Use of Angular material design(To make website responsive on all screens ).
+3.Use of Angular properties(@Input and @output) to transfer data from parent   to  child and vice-versa.
 4.Implementation of Dependency Injection Concept.
+
+## Used Packages CLI Commands:-
+ng add @angular/material (Add material design).
+npm install bootstrap@4 (Add Bootstrap modules).
+
 
 ## Screenshots:-
 you can find the screenshots of the project in the same directory
