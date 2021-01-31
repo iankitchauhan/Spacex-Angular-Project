@@ -9,7 +9,7 @@
           <a href="void(0)">
             <h5 class="card-title">{{item?.mission_name}}#{{i +1}}</h5>
           </a>
-          <ng-container *ngIf="item?.mission_id && item?.mission_id.length">
+          <ng-container *ngIf="item?.mission_id && item.mission_id.length">
           <b class="card-text">Mission Ids:</b>
           <ul *ngFor=" let missionSerial of item?.mission_id">
             <li>{{missionSerial}}</li>
