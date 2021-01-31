@@ -18,6 +18,8 @@ export class FilterComponent implements OnInit {
   paramsObject = {};
 
   constructor() { }
+
+  //This function is used to show list of number of launches specific to a year
   selectYear(Syear, index) {
     this.booleanCheck = !this.booleanCheck;
     if (this.selectedYear !== index) {
@@ -32,6 +34,8 @@ export class FilterComponent implements OnInit {
       this.emitFilter.emit(this.paramsObject)
     }
   }
+
+  // This function is used to show list of successful or unsuccessful launches
   selectSuccessfulLaunch(Slaunch, s) {
     this.booleanLaunch = !this.booleanLaunch;
     if (this.selectedLaunch !== s) {
@@ -47,6 +51,9 @@ export class FilterComponent implements OnInit {
 
     }
   }
+
+
+  // This function is used to show list of successful or unsuccessful landings
   successfulLand(Sland, l) {
     this.booleanLand = !this.booleanLand;
     if (this.selectedLand !== l) {

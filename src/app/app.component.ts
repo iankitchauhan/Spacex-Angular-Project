@@ -8,11 +8,11 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  spaceData: any;
+  launchList: any;
   isLoader= true;
   constructor(private spacexService: SpacexService) {
   }
-
+//Array of year to  filter data
   yearArray = [
     { 'year': 2006 },
     { 'year': 2007 },
@@ -33,11 +33,13 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     this.getSpaceXMissionData();
   }
-
+// This function is used for to get the list of launches
   getSpaceXMissionData(params?) {
     this.spacexService.getMissionData(environment.baseUrl,params).subscribe(response => {
-      this.spaceData = response;
-      this.isLoader = false;
+      if(response) {
+        this.launchList = response;
+        this.isLoader = false;
+      }
     },error=>{      this.isLoader = false;
     })
 

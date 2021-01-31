@@ -30,11 +30,19 @@ Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protrac
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI README](https://github.com/angular/angular-cli/blob/master/README.md).
 
+
+## End results:-
+![alt text](https://github.com/iankitchauhan/Spacex-Angular-Project/blob/master/screencapture-localhost-4200-2020-08-08-16_03_14.png)
 ## Index:-
-1. Use of BootStrap 4(To make website responsive on all screens ).
-2. Use of Angular material design(To make website responsive on all screens ).
-3.Use of Angular properties(@Input and @output) to transfer data from parent   to  child and vice-versa.
-4.Implementation of Dependency Injection Concept.
+1. Use of Angular material design.
+2.Use of Angular properties(@Input and @output) to transfer data from parent   to  child and vice-versa.
+3.Implementation of Dependency Injection Concept.
+4. generating two component using CLI command
+```
+ng g c filter
+ng g c main-content
+
+```
 
 ## Used Packages CLI Commands:-
 ng add @angular/material (Add material design).
