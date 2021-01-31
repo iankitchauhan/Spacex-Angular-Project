@@ -42,11 +42,32 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ng g c filter
 ng g c main-content
 
+```.
+5. >Template view of the main file
+```
+<ng-container *ngIf="!isLoader" >
+  <div class="container-fluid">
+    <h2 class="heading">SpaceX Launched Programs</h2>
+  <div class="row">
+    <div class="col-md-2">
+      <div class="sideBar">
+      <app-filter (emitFilter)="getSpaceXMissionData($event)" [yearData]="yearArray" ></app-filter>
+      </div>
+    </div>
+    <div class="col-md-10">
+      <app-main-content [mainContent]="launchList" ></app-main-content>
+    </div>
+    </div>
+    </div>
+    <p class="footer-text"><b>Developed By:Ankit Kumar</b></p>
+  </ng-container>
+
+  <mat-progress-spinner *ngIf="isLoader" style="margin:0 auto;" value="100" size="large" diameter="500"  mode="indeterminate">
+  </mat-progress-spinner>
 ```
 
 ## Used Packages CLI Commands:-
 ng add @angular/material (Add material design).
-npm install bootstrap@4 (Add Bootstrap modules).
 
 
 ## Screenshots:-

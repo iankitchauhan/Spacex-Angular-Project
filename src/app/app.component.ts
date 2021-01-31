@@ -8,8 +8,8 @@ import { environment } from 'src/environments/environment';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements OnInit {
-  launchList: any;
-  isLoader= true;
+  launchList: Array<any[]>;
+  isLoader:boolean= true;
   constructor(private spacexService: SpacexService) {
   }
 //Array of year to  filter data
@@ -35,7 +35,7 @@ export class AppComponent implements OnInit {
   }
 // This function is used for to get the list of launches
   getSpaceXMissionData(params?) {
-    this.spacexService.getMissionData(environment.baseUrl,params).subscribe(response => {
+    this.spacexService.getMissionData(environment.baseUrl,params).subscribe((response:Array<any[]>) => {
       if(response) {
         this.launchList = response;
         this.isLoader = false;
