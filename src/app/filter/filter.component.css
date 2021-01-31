@@ -1,21 +1,25 @@
 .btn-success {
   color: black;
-  background-color: #00ff7f;
-  border-color: #00ff7f;
+  background-color: #c4e099;
   font-weight: 500;
   width: 100%;
   margin-bottom: 10px;
-}
-.btn-success:hover, .btn-success.active {
-  background-color: #00fa9a;
-  border-color: #00fa9a;
-}
-.my-class{
-  background-color: #218838;
-  border-color: #218838;
+  border: 0;
+  border-radius: 4px;
+  padding: 8px;
 }
 
-.filter-tags{
-text-align: center;
-border-bottom: solid 2px #c6c6c6;
+.btn-success:hover,
+.btn-success.active {
+  background-color: #7cbb32;
+}
+
+.my-class {
+  background-color: #7cbb32;
+  background-color: #7cbb32;
+}
+
+.filter-tags {
+  text-align: center;
+  border-bottom: solid 2px #c6c6c6;
 }

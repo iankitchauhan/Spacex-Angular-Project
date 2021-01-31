@@ -1,27 +1,29 @@
-<div class="row" *ngIf="mainContent">
+<div class="row justify-space-between" *ngIf="mainContent">
   <div class="col-md-3 card-container" *ngFor="let item of mainContent;let i=index;">
-  <div class="card-group">
-  <div class="card">
-    <div class="img-container">
-    <img class="card-img-top" src="{{item?.links?.mission_patch_small}}"  onError="this.src='../../../../assets/no-image.png';" alt="Card image cap">
-  </div>
-    <div class="card-body">
-     <a href="void(0)"> <h5 class="card-title">{{item?.mission_name}}#{{i +1}}</h5></a>
-      <p class="card-text">Mission Ids</p>
-      <ul *ngFor=" let missionSerial of item?.mission_id">
-        <li>{{missionSerial}}</li>
-      </ul>
-      <div>
-      <b class="card-text">Launch Year</b>:{{item?.launch_year}}
-      </div>
-      <div>
-        <b class="card-text">Successful Launch</b>:{{item?.launch_success}}
+    <div class="card-group">
+      <div class="card">
+        <div class="img-container">
+          <img class="card-img-top" src="{{item?.links?.mission_patch_small}}" onError="this.src='../../../../assets/no-image.png';" alt="Card image cap">
         </div>
-        <div>
-          <b class="card-text">Successful Landing</b>:{{item?.rocket?.first_stage?.cores[0]['land_success']? item?.rocket?.first_stage?.cores[0]['land_success']:'false'}}
+        <div class="card-body">
+          <a href="void(0)">
+            <h5 class="card-title">{{item?.mission_name}}#{{i +1}}</h5>
+          </a>
+          <p class="card-text">Mission Ids</p>
+          <ul *ngFor=" let missionSerial of item?.mission_id">
+            <li>{{missionSerial}}</li>
+          </ul>
+          <div>
+            <b class="card-text">Launch Year</b>:{{item?.launch_year}}
           </div>
-    </div>
-     </div>
+          <div>
+            <b class="card-text">Successful Launch</b>:{{item?.launch_success}}
+          </div>
+          <div>
+            <b class="card-text">Successful Landing</b>:{{item?.rocket?.first_stage?.cores[0]['land_success']? item?.rocket?.first_stage?.cores[0]['land_success']:'false'}}
+          </div>
+        </div>
+      </div>
     </div>
   </div>
   <div class="col-12 starter-template text-center" *ngIf="mainContent.length === 0">

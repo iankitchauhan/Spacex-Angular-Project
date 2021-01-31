@@ -1,34 +1,67 @@
+.container-fluid {
+  width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  max-width: 1440px;
+}
+
+
+
 .btn-success {
   color: black;
   background-color: lightgreen;
   border-color: lightgreen;
   font-weight: 500;
 }
-.my-class{
+
+.my-class {
   background-color: #218838;
   border-color: #218838;
 }
-.heading{
-  font-size: 39px;
-  margin: 0 0 20px 0;
-  text-align: center;
-  border-bottom: solid 4px;
-}
 
-@media(max-width :767px){
-  .heading{
-    font-size: 18px;
-    text-align: center;
-  }
+.heading {
+  font-size: 30px;
+  margin: 0 0 16px 0;
 }
 
 .sideBar {
-background-color: white;
-padding: 12px;
-margin-top: 13px;
+  background-color: white;
+  padding: 12px;
+  flex: 0 0 15%;
+  border-radius: 4px;
+  max-width: 240px
 }
 
 .footer-text {
-text-align: center;
-color: black;
+  text-align: center;
+  color: black;
+}
+
+
+.right-content {
+  margin-left: 1%;
+  flex: 0 0 80%;
+}
+
+.align-items-start {
+  align-self: flex-start;
+}
+
+@media screen and (max-width: 700px) {
+  .heading {
+    font-size: 18px;
+  }
+
+  .sideBar {
+    flex: auto;
+    max-width: 100%;
+  }
+
+  .right-content {
+    margin-left: 0;
+    flex: 0 0 100%;
+    margin-top: 16px;
+  }
+
+
 }
