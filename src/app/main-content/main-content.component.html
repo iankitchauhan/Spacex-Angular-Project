@@ -9,18 +9,20 @@
           <a href="void(0)">
             <h5 class="card-title">{{item?.mission_name}}#{{i +1}}</h5>
           </a>
-          <p class="card-text">Mission Ids</p>
+          <ng-container *ngIf="item?.mission_id && item?.mission_id.length">
+          <b class="card-text">Mission Ids:</b>
           <ul *ngFor=" let missionSerial of item?.mission_id">
             <li>{{missionSerial}}</li>
           </ul>
-          <div>
-            <b class="card-text">Launch Year</b>:{{item?.launch_year}}
+          </ng-container>
+          <div class="pad-bottom">
+            <b class="card-text">Launch Year:</b>{{item?.launch_year}}
           </div>
-          <div>
-            <b class="card-text">Successful Launch</b>:{{item?.launch_success}}
+          <div class="pad-bottom">
+            <b class="card-text">Successful Launch:</b>{{item?.launch_success}}
           </div>
-          <div>
-            <b class="card-text">Successful Landing</b>:{{item?.rocket?.first_stage?.cores[0]['land_success']? item?.rocket?.first_stage?.cores[0]['land_success']:'false'}}
+          <div class="pad-bottom">
+            <b class="card-text">Successful Landing:</b>{{item?.rocket?.first_stage?.cores[0]['land_success']? item?.rocket?.first_stage?.cores[0]['land_success']:'false'}}
           </div>
         </div>
       </div>

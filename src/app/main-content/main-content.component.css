@@ -12,7 +12,7 @@
 .card-group {
   background: #fff;
   border-radius: 6px;
-  padding: 12px;
+  padding: 18px;
 }
 
 .img-container {
@@ -29,4 +29,8 @@
 }
 img.card-img-top {
   max-width: 100%;
+}
+
+.pad-bottom{
+  padding-bottom: 3%;
 }
