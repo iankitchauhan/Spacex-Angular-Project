@@ -44,7 +44,9 @@ ng g c main-content
 
 ```
 5.Template view of the main file
-`<ng-container *ngIf="!isLoader" >
+
+```html
+<ng-container *ngIf="!isLoader" >
   <div class="container-fluid">
     <h2 class="heading">SpaceX Launched Programs</h2>
   <div class="row">
@@ -62,7 +64,8 @@ ng g c main-content
   </ng-container>
 
   <mat-progress-spinner *ngIf="isLoader" style="margin:0 auto;" value="100" size="large" diameter="500"  mode="indeterminate">
-  </mat-progress-spinner>`
+  </mat-progress-spinner>
+  ```
 
 ## Used Packages CLI Commands:-
 ng add @angular/material (Add material design).
