@@ -35,15 +35,15 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 ![alt text](https://github.com/iankitchauhan/Spacex-Angular-Project/blob/master/screencapture-localhost-4200-2020-08-08-16_03_14.png)
 ## Index:-
 1. Use of Angular material design.
-2.Use of Angular properties(@Input and @output) to transfer data from parent   to  child and vice-versa.
-3.Implementation of Dependency Injection Concept.
+2. Use of Angular properties(@Input and @output) to transfer data from parent to child and vice-versa.
+3. Implementation of Dependency Injection Concept.
 4. generating two component using CLI command
 ```
 ng g c filter
 ng g c main-content
 
 ```
-5.Template view of the main file
+5. Template view of the main file
 
 ```html
 <ng-container *ngIf="!isLoader" >
@@ -66,11 +66,40 @@ ng g c main-content
   <mat-progress-spinner *ngIf="isLoader" style="margin:0 auto;" value="100" size="large" diameter="500"  mode="indeterminate">
   </mat-progress-spinner>
   ```
+.6 Functions Used:-
+```
+ //This function is used to show list of number of launches specific to a year
+  selectYear(Syear, index) {
+    this.booleanCheck = !this.booleanCheck;
+    if (this.selectedYear !== index) {
+      this.booleanCheck = true;
+    }
+    this.selectedYear = index;
+    this.paramsObject['launch_year'] = Syear;
+    if (this.booleanCheck) {
+      this.emitFilter.emit(this.paramsObject);
+    } else {
+      delete this.paramsObject['launch_year'];
+      this.emitFilter.emit(this.paramsObject)
+    }
+  }
 
+  // This function is used for to get the list of launches
+  getSpaceXMissionData(params?) {
+    this.spacexService.getMissionData(environment.baseUrl,params).subscribe((response:Array<any[]>) => {
+      if(response) {
+        this.launchList = response;
+        this.isLoader = false;
+      }
+    },error=>{      this.isLoader = false;
+    })
+
+  }
+
+```
 ## Used Packages CLI Commands:-
 ng add @angular/material (Add material design).
 
 
-## Screenshots:-
-you can find the screenshots of the project in the same directory
+
 
