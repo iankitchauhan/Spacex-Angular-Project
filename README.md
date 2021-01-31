@@ -32,7 +32,14 @@ To get more help on the Angular CLI use `ng help` or go check out the [Angular C
 
 
 ## End results:-
-![alt text](https://github.com/iankitchauhan/Spacex-Angular-Project/blob/master/screencapture-localhost-4200-2020-08-08-16_03_14.png)
+### desktop view 
+
+![alt text](https://github.com/iankitchauhan/Spacex-Angular-Project/blob/master/desktop-view.PNG)
+
+### Mobile view
+
+![alt text](https://github.com/iankitchauhan/Spacex-Angular-Project/blob/master/mbile.png)
+
 ## Index:-
 1. Use of Angular material design.
 2. Use of Angular properties(@Input and @output) to transfer data from parent to child and vice-versa.
