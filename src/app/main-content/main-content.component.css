@@ -7,11 +7,11 @@
 .card-container {
   margin: 0px 0px 16px;
   flex: 0 0 24%;
+  background: #fff;
+    border-radius: 6px;
 }
 
 .card-group {
-  background: #fff;
-  border-radius: 6px;
   padding: 18px;
 }
 
