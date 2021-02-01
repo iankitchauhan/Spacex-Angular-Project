@@ -73,7 +73,31 @@ ng g c main-content
   <mat-progress-spinner *ngIf="isLoader" style="margin:0 auto;" value="100" size="large" diameter="500"  mode="indeterminate">
   </mat-progress-spinner>
   ```
-.6 Functions Used:-
+6. Media Query  for different screen:-
+```
+//media query for mobile(less then 1440px and greater than 1024px width)
+
+@media screen and (max-width: 1440px) {
+  .card-container {
+    flex: 0 0 32% !important;
+  }
+}
+//media query for mobile(greater then 700px width and less then 1024px)
+@media screen and (max-width: 1024px) {
+  .card-container {
+    flex: 0 0 49% !important;
+  }
+}
+//media query for mobile(less then 700px width)
+@media screen and (max-width: 700px) {
+
+  .card-container {
+    flex: 0 0 100% !important;
+  }
+
+}
+```
+.7 Functions Used:-
 ```
  //This function is used to show list of number of launches specific to a year
   selectYear(Syear, index) {
