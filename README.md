@@ -75,9 +75,9 @@ ng g c main-content
   ```
 6. Media Query  for different screen:-
 ```
-//media query for mobile(less then 1440px and greater than 1024px width)
+//media query for mobile(less then 1100px and greater than 1024px width)
 
-@media screen and (max-width: 1440px) {
+@media screen and (max-width: 1100px) {
   .card-container {
     flex: 0 0 32% !important;
   }
